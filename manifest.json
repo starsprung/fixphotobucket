@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Fix Embedded Photobucket Images",
+  "description": "Fixes Photobucket images with the 3rd-party hosting warning",
+  "version": "1.0.1",
+
+  "author": "Shaun Starsprung",
+
+  "icons": {
+    "48": "icon_48.png", 
+    "128": "icon_128.png"
+  },
+
+  "minimum_chrome_version": "51",
+
+  "background": {
+    "scripts": ["photofix.js"],
+    "persistent": true
+  },
+
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://*/*"
+  ]
+}
