@@ -26,7 +26,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(({requestHeaders}) => {
   return {requestHeaders: requestHeaders};
 }, {
   urls: ['*://*.photobucket.com/*'],
-  types: ['image']
+  types: ['image', 'other']
 }, ['blocking', 'requestHeaders']);
 
 chrome.webRequest.onBeforeRequest.addListener(({url}) => {
@@ -41,5 +41,5 @@ chrome.webRequest.onBeforeRequest.addListener(({url}) => {
     '*://p.dreamwidth.org/*photobucket.com/*',
     '*://*.wp.com/*photobucket.com/*'
   ],
-  types: ['image']
+  types: ['image', 'other']
 }, ['blocking'])
