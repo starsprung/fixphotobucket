@@ -17,7 +17,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(({requestHeaders}) => {
       refererSet = true;
       break;
     }
-  };
+  }
 
   if (!refererSet) {
     requestHeaders.push({name: 'Referer', value: REFERER});
@@ -42,4 +42,4 @@ chrome.webRequest.onBeforeRequest.addListener(({url}) => {
     '*://*.wp.com/*photobucket.com/*'
   ],
   types: ['image', 'other']
-}, ['blocking'])
+}, ['blocking']);
